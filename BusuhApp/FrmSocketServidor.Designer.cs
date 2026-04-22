@@ -39,26 +39,28 @@ partial class FrmSocketServidor
         // lblClientes
         // 
         lblClientes.AutoSize = true;
-        lblClientes.Font = new System.Drawing.Font("Segoe UI", 16F);
-        lblClientes.Location = new System.Drawing.Point(195, 30);
+        lblClientes.Font = new System.Drawing.Font("Segoe UI", 12F);
+        lblClientes.Location = new System.Drawing.Point(325, 36);
         lblClientes.Name = "lblClientes";
-        lblClientes.Size = new System.Drawing.Size(240, 37);
+        lblClientes.Size = new System.Drawing.Size(71, 28);
         lblClientes.TabIndex = 0;
-        lblClientes.Text = "Clientes Conectados";
+        lblClientes.Text = "Clientes:";
         // 
         // txtClientesConectados
         // 
         txtClientesConectados.Font = new System.Drawing.Font("Segoe UI", 14F);
-        txtClientesConectados.Location = new System.Drawing.Point(450, 30);
+        txtClientesConectados.Anchor = AnchorStyles.Top;
+        txtClientesConectados.Location = new System.Drawing.Point(402, 30);
         txtClientesConectados.Name = "txtClientesConectados";
         txtClientesConectados.ReadOnly = true;
-        txtClientesConectados.Size = new System.Drawing.Size(120, 39);
+        txtClientesConectados.Size = new System.Drawing.Size(90, 39);
         txtClientesConectados.TabIndex = 1;
         txtClientesConectados.Text = "0";
         txtClientesConectados.TextAlign = HorizontalAlignment.Center;
         // 
         // lstBitacora
         // 
+        lstBitacora.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         lstBitacora.Font = new System.Drawing.Font("Segoe UI", 11F);
         lstBitacora.FormattingEnabled = true;
         lstBitacora.ItemHeight = 25;
@@ -69,6 +71,7 @@ partial class FrmSocketServidor
         // 
         // btnCliente
         // 
+        btnCliente.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         btnCliente.Font = new System.Drawing.Font("Segoe UI", 10F);
         btnCliente.Location = new System.Drawing.Point(645, 29);
         btnCliente.Name = "btnCliente";
@@ -110,8 +113,9 @@ partial class FrmSocketServidor
         Controls.Add(lstBitacora);
         Controls.Add(txtClientesConectados);
         Controls.Add(lblClientes);
-        FormBorderStyle = FormBorderStyle.FixedSingle;
-        MaximizeBox = false;
+        FormBorderStyle = FormBorderStyle.Sizable;
+        MaximizeBox = true;
+        MinimumSize = new Size(860, 560);
         Name = "FrmSocketServidor";
         StartPosition = FormStartPosition.CenterParent;
         Text = "Servidor";
